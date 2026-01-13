@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ExcursionApp\\ExcursionApp.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Common_Authentication\\Common_Authentication.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

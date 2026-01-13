@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExcursionApp.Data.Models.Bookings
+{
+    public class BookingReq
+    {
+        public long? booking_id {  get; set; }
+        public string? client_id { get; set; }
+        public string? lang_code { get; set; }
+        public int? booking_status_id { get; set; }
+
+    }
+}

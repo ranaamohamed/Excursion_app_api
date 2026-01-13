@@ -1,0 +1,159 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reisebestätigung - DE</title>
+  </head>
+  <body style="margin:0; padding:0; background-color:#f2f4f7;">
+    <center style="width:100%; background-color:#f2f4f7;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+          <td align="center" style="padding:24px 12px;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" style="background:#ffffff; border-radius:12px; overflow:hidden;">
+              <tr>
+                <td style="background:#5599cb; padding:24px;">
+                  <table role="presentation" width="100%">
+                    <tr>
+                      <td width="48">
+                        <img src="https://via.placeholder.com/48x48.png?text=✈" width="48" height="48" alt="Logo" style="display:block; border-radius:8px;">
+                      </td>
+                      <td style="padding-left:12px; color:#ffffff;">
+                        <div style="font-size:14px; letter-spacing:.08em; opacity:.9;">REISEBESTÄTIGUNG</div>
+                        <div style="font-size:22px; font-weight:700; line-height:1.3;">Ihre Reise ist bestätigt, {{customer_name}}!</div>
+                      </td>
+                      <td align="right">
+                        <a href="{{manage_url}}" style="font-size:14px; color:#ffffff; text-decoration:underline;">Buchung verwalten</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:24px; font-size:14px; color:#000000;">
+                  <p style="margin:0; font-size:16px;">Hallo {{customer_name}},</p>
+                  <p style="margin:12px 0 0;">Vielen Dank, dass Sie sich für {{brand_name}} entschieden haben. Ihre Buchung <strong>{{booking_reference}}</strong> für <strong>{{trip_name}}</strong> ist bestätigt.</p>
+                </td>
+              </tr>
+
+              <!-- Buchungsdetails -->
+              <tr>
+                <td style="padding:0 24px 24px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e5e7eb; border-radius:8px;">
+                    <tr>
+                      <td style="padding:16px; border-bottom:1px solid #e5e7eb;">
+                        <div style="font-size:13px; color:#555;">Reise</div>
+                        <div style="font-size:16px; font-weight:600; color:#000;">{{trip_name}}</div>
+                      </td>
+                      <td style="padding:16px; border-bottom:1px solid #e5e7eb;" align="right">
+                        <div style="font-size:13px; color:#555;">Buchungsnr.</div>
+                        <div style="font-size:16px; font-weight:600; color:#000;">{{booking_reference}}</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:16px;">
+                        <div style="font-size:13px; color:#555;">Daten</div>
+                        <div style="font-size:15px; color:#000;">{{start_date}} → {{end_date}}</div>
+                      </td>
+                      <td style="padding:16px;" align="right">
+                        <div style="font-size:13px; color:#555;">Gäste</div>
+                        <div style="font-size:15px; color:#000;">{{guests_count}} Reisende</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:16px;">
+                        <div style="font-size:13px; color:#555;">Abholung</div>
+                        <div style="font-size:15px; color:#000;">{{pickup_location}} um {{pickup_time}}</div>
+                      </td>
+                      <td style="padding:16px;" align="right">
+                        <div style="font-size:13px; color:#555;">Zahlung</div>
+                        <div style="font-size:15px; color:#000;">{{payment_status}} • {{currency}}{{total_amount}}</div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Reiseplan -->
+              <tr>
+                <td style="padding:0 24px 24px;">
+                  <div style="font-size:16px; font-weight:700; color:#000; padding-bottom:8px;">Reiseplan</div>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e5e7eb; border-radius:8px;">
+                      {{#itinerary}}
+                      <tr>
+                          <td style="padding:12px; border-bottom:1px solid #e5e7eb;">
+                              <!-- Icon + Title -->
+                              <table role="presentation" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                      <td valign="top" style="padding-right:8px;">
+                                          <!-- Map Marker Icon (SVG) -->
+                                          <div style="width:16px; height:16px;">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#5599cb" viewBox="0 0 24 24">
+                                                  <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0
+                             9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5
+                             2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                              </svg>
+                                          </div>
+                                      </td>
+                                      <td valign="top">
+                                          <div style="font-size:15px; font-weight:600; color:#000;">Day 1 – City Tour</div>
+                                          <div style="font-size:13px; color:#555;">Duration: 4 hours</div>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </td>
+                      </tr>
+                      {{/itinerary}}
+                  </table>
+                </td>
+              </tr>
+
+              <!-- Preisübersicht -->
+              <tr>
+                <td style="padding:0 24px 24px;">
+                  <div style="font-size:16px; font-weight:700; color:#000; padding-bottom:8px;">Preisübersicht</div>
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #e5e7eb; border-radius:8px;">
+                    <tr>
+                      <td style="padding:12px; font-size:14px; color:#000;">Reisepreis</td>
+                      <td align="right" style="padding:12px; font-size:14px; color:#000;">{{currency}}{{price_trip}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:12px; font-size:14px; color:#000;">Steuern & Gebühren</td>
+                      <td align="right" style="padding:12px; font-size:14px; color:#000;">{{currency}}{{price_fees}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:12px; font-size:14px; color:#000;">Rabatt</td>
+                      <td align="right" style="padding:12px; font-size:14px; color:#5599cb;">-{{currency}}{{price_discount}}</td>
+                    </tr>
+                    <tr>
+                      <td style="padding:12px; font-size:15px; font-weight:700; color:#000; border-top:1px solid #e5e7eb;">Gesamt</td>
+                      <td align="right" style="padding:12px; font-size:15px; font-weight:700; color:#000; border-top:1px solid #e5e7eb;">{{currency}}{{total_amount}}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <!-- CTA -->
+              <tr>
+                <td align="center" style="padding:24px;">
+                  <a href="{{ticket_url}}" style="background:#5599cb; color:#ffffff; display:inline-block; padding:12px 24px; border-radius:6px; text-decoration:none; font-weight:700; font-size:16px;">Tickets / Gutschein ansehen</a>
+                </td>
+              </tr>
+
+              <!-- Footer -->
+              <tr>
+                <td style="padding:0 24px 24px; font-size:13px; color:#555;">
+                  Brauchen Sie Hilfe? Kontaktieren Sie uns unter <a href="mailto:{{support_email}}" style="color:#5599cb;">{{support_email}}</a> oder rufen Sie <a href="tel:{{support_phone}}" style="color:#5599cb;">{{support_phone}}</a> an.
+                  <br><br>
+                  {{brand_name}} • {{brand_address}}<br>
+                  Diese E-Mail wurde an {{customer_email}} bezüglich der Buchung {{booking_reference}} gesendet.
+                </td>
+              </tr>
+
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>

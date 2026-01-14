@@ -4896,8 +4896,8 @@
     },
     "Mails_App/1.0.0": {
       "type": "project",
-      "path": "../../../../CommomMailApp/Mails_App/Mails_App.csproj",
-      "msbuildProject": "../../../../CommomMailApp/Mails_App/Mails_App.csproj"
+      "path": "../Mails_App/Mails_App.csproj",
+      "msbuildProject": "../Mails_App/Mails_App.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4948,8 +4948,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\CommomMailApp\\Mails_App\\Mails_App.csproj": {
-              "projectPath": "D:\\CommomMailApp\\Mails_App\\Mails_App.csproj"
+            "D:\\ExcursionSystem\\API\\ExcursionApp\\Mails_App\\Mails_App.csproj": {
+              "projectPath": "D:\\ExcursionSystem\\API\\ExcursionApp\\Mails_App\\Mails_App.csproj"
             }
           }
         }

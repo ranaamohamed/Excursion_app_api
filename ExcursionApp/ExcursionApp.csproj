@@ -26,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\CommomMailApp\Mails_App\Mails_App.csproj" />
     <ProjectReference Include="..\ExcursionApp.Data\ExcursionApp.Data.csproj" />
+    <ProjectReference Include="..\Mails_App\Mails_App.csproj" />
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ExcursionApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44f0409cfb752ee844d834603d7224c5eddd5244")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4760a98de32f6ece53348fb5ae3f5f2082b0615")]
 [assembly: System.Reflection.AssemblyProductAttribute("ExcursionApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ExcursionApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
